@@ -23,6 +23,7 @@ public class UserRestApiController {
     public boolean save(@RequestBody User user){
      if(userService.save(user)){
          System.out.println("保存用户成功:"+user);
+         return true;
      }
      return false;
     }

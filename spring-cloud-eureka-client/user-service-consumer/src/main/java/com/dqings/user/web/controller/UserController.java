@@ -5,7 +5,7 @@ import com.dqings.user.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collection;
@@ -21,9 +21,11 @@ public class UserController {
     }
 
     @PostMapping("user/save")
-    public boolean save(@RequestBody User user){
+    public boolean save(@RequestParam String name){
+        User user = new User();
+        user.setName(name);
         if(userService.save(user)){
-            System.out.println("保存用户成功:"+user);
+            return true;
         }
         return false;
     }
