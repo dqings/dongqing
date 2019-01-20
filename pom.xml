@@ -9,7 +9,8 @@
 		<module>spring-cloud-eureka-server</module>
         <module>spring-cloud-hystrix-client</module>
 		<module>spring-cloud-hystrix-dashboard</module>
-	</modules>
+        <module>spring-cloud-feign-client</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -29,6 +30,26 @@
 	</properties>
 
 	<dependencies>
+			<dependency>
+				<groupId>javax.xml.bind</groupId>
+				<artifactId>jaxb-api</artifactId>
+				<version>2.3.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-impl</artifactId>
+				<version>2.3.0</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.xml.bind</groupId>
+				<artifactId>jaxb-core</artifactId>
+				<version>2.3.0</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.activation</groupId>
+				<artifactId>activation</artifactId>
+				<version>1.1.1</version>
+			</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
