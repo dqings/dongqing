@@ -3,15 +3,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring-cloud-feign-client</artifactId>
+        <artifactId>spring-cloud-merge-application</artifactId>
         <groupId>com.dqings</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>person-service-provider</artifactId>
+    <artifactId>spring-cloud-zuul</artifactId>
 
-    <name>person-service-provider</name>
+    <name>spring-cloud-zuul</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -24,12 +24,15 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.dqings</groupId>
-            <artifactId>person-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
