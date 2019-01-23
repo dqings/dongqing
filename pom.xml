@@ -11,6 +11,7 @@
 		<module>spring-cloud-hystrix-dashboard</module>
         <module>spring-cloud-feign-client</module>
         <module>spring-cloud-zuul</module>
+        <module>spring-cloud-stream</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
